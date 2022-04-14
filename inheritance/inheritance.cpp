@@ -4,23 +4,21 @@ using namespace std;
 class Base{
         int a;
         int b;
+        int mlp;
     public:
         Base(int a, int b){
         cout << a, b;
     }
-};
-
-class derived: public Base{
-        int c;
-    public:
-        derived(int c, int a, int b):Base(a, b){
-            void getN(){
-                cin >> c, a, b;
-            };
+        int mltiply( int a, int b){
+            return (a*b);
         }
 };
 
+class derived: public Base{
+    public:
+};
+
 int main(){
-    derived ob;
-    ob.getN();
+    derived obj;
+    cout << "Multiplication: " << obj.mltiply(5,7) << endl;
 }
