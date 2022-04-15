@@ -34,7 +34,7 @@ class Animal {
 class Dog : public Animal {
 
     public:
-        void setType(string tp) {
+        void setType(string tp) {       // Protected keyword hides data, we cannot access type directly. Thus we're using the function setType(), instead of using dog1.type = "mammal";
             type = tp;      // modifies a protected member string variable
         }
 
