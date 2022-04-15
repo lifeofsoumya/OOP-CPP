@@ -1,24 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Base{
-        int a;
-        int b;
-        int mlp;
+// base class
+class Animal {
+
     public:
-        Base(int a, int b){
-        cout << a, b;
+    void eat() {
+        cout << "I can eat!" << endl; // all animal eats
     }
-        int mltiply( int a, int b){
-            return (a*b);
-        }
+
+    void sleep() {
+        cout << "I can sleep!" << endl; // all animal sleeps
+    }
 };
 
-class derived: public Base{
+// derived class
+class Dog : public Animal {
+
     public:
+    void bark() {
+        cout << "I can bark! Woof woof!!" << endl; // only a dog can bark
+    }
 };
 
-int main(){
-    derived obj;
-    cout << "Multiplication: " << obj.mltiply(5,7) << endl;
+int main() {
+    // Create object of the Dog class
+    Dog dog1;
+
+    // Calling members of the base class
+    dog1.eat();
+    dog1.sleep();
+
+    // Calling member of the derived class
+    dog1.bark();
+
+    return 0;
 }
