@@ -39,12 +39,12 @@ class Dog : public Animal {
         }
 
         void displayInfo(string c) {
-            cout << "I am a " << type << endl;
+            cout << "I am a " << type << endl;      // prints the type set by setType() function
             cout << "My color is " << c << endl;
         }
 
         void bark() {
-            cout << "I can bark! Woof woof!!" << endl;
+            cout << "I can bark! Woof woof!!" << endl;      // signature move of an animal added
         }
 };
 
@@ -61,9 +61,17 @@ int main() {
     dog1.bark();
     dog1.setType("mammal");
 
-    // Using getColor() of dog1 as argument
-    // getColor() returns string data
-    dog1.displayInfo(dog1.getColor());
+    dog1.displayInfo(dog1.getColor()); // after receiving data from return of getColor() it uses as a string to displayInfo() function which receives a string
 
     return 0;
 }
+
+/* Expected Output:
+
+    I can eat!
+    I can sleep!
+    I can bark! Woof woof!!
+    I am a mammal
+    My color is black
+    
+*/
