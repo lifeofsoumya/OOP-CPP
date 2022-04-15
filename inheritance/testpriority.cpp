@@ -1,43 +1,38 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-class base1{
-public:
-    base1 ()
-    {cout << " constructor of class base1\n";}
-
-    ~base1 ()
-    {cout << " destructor of class base1\n";
-}
-};
-
-class base2{
-public:
-    base2(){cout << " constructor of class base2\n";}
-    ~base2()
-    {cout << " destructor of class base2\n";}
-
-};
-
-class derive1 : public base1, public base2{   
+class base {
     public:
-        derive1(){
-    cout << " constructor of class derive1\n";}
-
-    ~derive1()
-    {cout << " destructor of class derive1\n";}
-
+        base(){
+            cout << " Constructor of base called" << endl;
+        }
+        ~base(){
+            cout << " Destructor off base called" << endl;
+        }
 };
 
+class derived : public base {
+    public:
+        derived(){
+            cout << " Constructor of Derived called" << endl;
+        }
+        ~derived(){
+            cout << " Destructor of derived called" << endl;
+        }
+};
 
+main(){
+    derived x;
 
-
-main ()
-
-{
-    derive1 x;
-
-    cout << " Destructors are: "<<endl;
-
+    cout << "Constructors called, half done....." << endl;
 }
+
+/* Expected Output:
+
+    constructor of base called
+    Constructor of Derived called
+    Constructors called, half done.....
+    Destructor of derived called
+    Destructor off base called
+    
+*/
