@@ -19,3 +19,6 @@ int main() {
         D d = D();
         cout << "x : " << d.x << endl;
     }
+
+// Expected output: 
+//     x : 2
