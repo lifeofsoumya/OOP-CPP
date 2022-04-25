@@ -31,3 +31,6 @@ int main(){
     Ptr->Disp();
     return 0;
 }
+
+// Expected Output: 
+    // Derived From Base
