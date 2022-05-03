@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-template <class x> void func(x a){
+template <class x> void func(x a){ // template <typename type1>
     cout << "executing first function with single argument\n";
 }
 
